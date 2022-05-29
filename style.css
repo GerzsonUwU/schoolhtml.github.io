@@ -1,4 +1,6 @@
 body {
+
+  
     --text-color: #222;
     --bkg-color: #fff;
     --div-color: #f1f1f1;
@@ -242,4 +244,14 @@ li{
 #video{
   margin-top: 10px;
   margin-left: 80px;
+}
+
+.link{
+  color: #0088a9;
+}
+
+.credit{
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px;
 }
