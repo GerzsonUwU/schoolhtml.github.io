@@ -1,0 +1,245 @@
+body {
+    --text-color: #222;
+    --bkg-color: #fff;
+    --div-color: #f1f1f1;
+    --icon: url(https://imgur.com/UJezcxA.png);
+  }
+  body.dark-theme {
+    --text-color: #edf0f1;
+    --bkg-color: #121212;
+    --div-color: #24252a;
+    --icon: url(https://i.imgur.com/qJkZvOO.png);
+  }
+  
+  @media (prefers-color-scheme: dark){
+    body {
+        --text-color: #edf0f1;
+        --bkg-color: #121212;
+        --div-color: #24252a;
+        --icon: url(https://i.imgur.com/qJkZvOO.png);
+      }
+      body.light-theme {
+        --text-color: #222;
+        --bkg-color: #fff;
+        --div-color: #f1f1f1;
+        --icon: url(https://imgur.com/UJezcxA.png);
+      }
+  }
+
+  @media only screen and (max-width : 768px){
+    .margin{
+      margin-left: 25px;
+    }
+  }
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+    background-color: var(--bkg-color);
+  }
+
+  .text{
+      color: var(--text-color);
+      transition: color 0.3s ease 0s
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: var(--div-color);
+  }
+  
+  #title {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: color 0.3s ease 0s
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: #0088a9;
+  }
+  
+  .cta {
+    padding: 15px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+  
+  /* Mobile Nav */
+  
+  .menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: var(--div-color);
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #0088a9;
+  }
+
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: var(--text-color);
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+
+
+
+  .btn{
+    background-image: var(--icon);
+    width: 48px;
+    height: 48px;  
+    float: right;
+    padding: 0px 24px;
+    margin-right: 5px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+  }
+
+.imgcontainer{
+  display: flex;
+  flex: 1 1 auto;
+
+}
+
+h2{
+  margin-bottom: 10px;
+}
+
+#schoolimg{
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 auto;
+  display: flex;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.textcontainer{
+  justify-content: center;
+  background-color: var(--div-color);
+  margin: 20px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  flex: content;
+  max-width: 100%;
+  animation: fadeIn 1s;
+}
+
+.content{
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1320px;
+}
+
+li{
+  margin-top: 10px;
+  margin-left: 80px;
+  margin-bottom: 10px;
+}
+
+#lelek{
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+#video{
+  margin-top: 10px;
+  margin-left: 80px;
+}
